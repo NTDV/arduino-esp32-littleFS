@@ -1,15 +1,15 @@
 #pragma once
 
+#include "FileStream.h"
 #include "IFileSystem.h"
-#include "File.h"
 
 namespace ntdv {
 class FileSystem {
   public:
-  FileSystem(FileSystemPtr impl) : _impl(impl) { }
+  FileSystem(const FileSystemPtr &impl) : _impl(impl) { }
 
-  File Open(const char* path, const char* mode = FILE_READ, const bool create = false);
-  File Open(const String& path, const char* mode = FILE_READ, const bool create = false);
+  FileStream Open(const char* path, const char* mode = FILE_READ, bool create = false);
+  FileStream Open(const String& path, const char* mode = FILE_READ, bool create = false);
 
   bool Exists(const char* path);
   bool Exists(const String& path);

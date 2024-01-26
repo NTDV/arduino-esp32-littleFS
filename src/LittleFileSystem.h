@@ -8,7 +8,7 @@ class LittleFileSystem : public FileSystem {
   LittleFileSystem();
   ~LittleFileSystem();
 
-  bool Begin(bool formatOnFail=false, const char * basePath="/littlefs", uint8_t maxOpenFiles=10, const char * partitionLabel="spiffs");
+  bool Begin(bool formatOnFail = false, const char * basePath = "/littlefs", const char * partitionLabel = "spiffs");
   bool Format();
 
   size_t TotalBytes();

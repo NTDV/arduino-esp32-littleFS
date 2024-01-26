@@ -11,21 +11,19 @@ extern "C" {
 
 using namespace ntdv;
 
-class LittleFileSystemImpl : public VirtualFileSystem {
+class LittleFileSystemImpl final : public VirtualFileSystem {
   public:
-  LittleFileSystemImpl();
-  virtual ~LittleFileSystemImpl() { }
-  virtual bool Exists(const char* path);
+  LittleFileSystemImpl() = default;
+  ~LittleFileSystemImpl() override = default;
+  bool Exists(const char *path) override;
 };
 
-LittleFileSystemImpl::LittleFileSystemImpl() {}
-
 bool LittleFileSystemImpl::Exists(const char *path) {
-  File file = Open(path, "r", false);
+  const FileStream file = Open(path, "r", false);
   return file == true;
 }
 
-LittleFileSystem::LittleFileSystem() : FileSystem(FileSystemPtr(new LittleFileSystemImpl())),
+LittleFileSystem::LittleFileSystem() : FileSystem(std::make_shared<LittleFileSystemImpl>()),
 _partitionLabel(NULL) { }
 
 LittleFileSystem::~LittleFileSystem() {
@@ -35,7 +33,7 @@ LittleFileSystem::~LittleFileSystem() {
   }
 }
 
-bool LittleFileSystem::Begin(bool formatOnFail, const char *basePath, uint8_t maxOpenFiles, const char *partitionLabel) {
+bool LittleFileSystem::Begin(const bool formatOnFail, const char *basePath, const char *partitionLabel) {
   if (_partitionLabel) {
     free(_partitionLabel);
     _partitionLabel = NULL;
@@ -58,9 +56,9 @@ bool LittleFileSystem::Begin(bool formatOnFail, const char *basePath, uint8_t ma
   //  .read_only = false,
   //  .dont_mount = false,
   //  .grow_on_mount = true
-  //};
+  // };
 
-  esp_vfs_littlefs_conf_t conf = {
+  const esp_vfs_littlefs_conf_t conf = {
     .base_path = basePath,
     .partition_label = _partitionLabel,
     .format_if_mount_failed = false,
@@ -73,10 +71,12 @@ bool LittleFileSystem::Begin(bool formatOnFail, const char *basePath, uint8_t ma
       err = esp_vfs_littlefs_register(&conf);
     }
   }
+
   if(err != ESP_OK){
     log_e("Mounting LittleFS failed! Error: %d", err);
     return false;
   }
+
   _impl->Mountpoint(basePath);
   return true;
 }
@@ -84,18 +84,21 @@ bool LittleFileSystem::Begin(bool formatOnFail, const char *basePath, uint8_t ma
 void LittleFileSystem::End() {
   if(esp_littlefs_mounted(_partitionLabel)){
     esp_err_t err = esp_vfs_littlefs_unregister(_partitionLabel);
+
     if(err){
       log_e("Unmounting LittleFS failed! Error: %d", err);
       return;
     }
+
     _impl->Mountpoint(NULL);
   }
 }
 
 bool LittleFileSystem::Format() {
-  disableCore0WDT();
+  disableCore0WDT(); // Отключение сторожевого таймера, т.к. форматирование - долгая операция
   esp_err_t err = esp_littlefs_format(_partitionLabel);
-  enableCore0WDT();
+  enableCore0WDT(); // Включение сторожевого таймера
+
   if(err){
     log_e("Formatting LittleFS failed! Error: %d", err);
     return false;

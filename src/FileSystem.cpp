@@ -2,13 +2,13 @@
 
 using namespace ntdv;
 
-File FileSystem::Open(const String& path, const char* mode, const bool create) {
+FileStream FileSystem::Open(const String& path, const char* mode, const bool create) {
   return Open(path.c_str(), mode, create);
 }
 
-File FileSystem::Open(const char* path, const char* mode, const bool create) {
-  if (!_impl) return File();
-  return File(_impl->Open(path, mode, create));
+FileStream FileSystem::Open(const char* path, const char* mode, const bool create) {
+  if (!_impl) return FileStream();
+  return FileStream(_impl->Open(path, mode, create));
 }
 
 bool FileSystem::Exists(const char* path) {

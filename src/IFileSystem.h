@@ -11,7 +11,7 @@ class IFileSystem {
   IFileSystem() : _mountpoint(nullptr) {}
   virtual ~IFileSystem() {}
 
-  virtual FilePtr Open(const char *path, const char *mode, const bool create) = 0;
+  virtual FilePtr Open(const char *path, const char *mode, bool create) = 0;
 
   virtual bool Exists(const char *path) = 0;
   virtual bool Rename(const char *pathFrom, const char *pathTo) = 0;

@@ -10,7 +10,7 @@ class VirtualFileSystem : public IFileSystem {
   friend class VirtualFile;
 
   public:
-  FilePtr Open(const char* path, const char* mode, const bool create) override;
+  FilePtr Open(const char* path, const char* mode, bool create) override;
   bool Exists(const char* path) override;
   bool Rename(const char* pathFrom, const char* pathTo) override;
   bool Remove(const char* path) override;

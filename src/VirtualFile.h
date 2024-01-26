@@ -4,7 +4,6 @@
 #include "VirtualFileSystem.h"
 
 extern "C" {
-#include <sys/unistd.h>
 #include <sys/stat.h>
 #include <dirent.h>
 }
@@ -20,7 +19,7 @@ class VirtualFile : public IFile {
   mutable struct stat _stat;
   mutable bool _written;
 
-  void _getStat() const;
+  void getStat() const;
 
   public:
   VirtualFile(VirtualFileSystem* fs, const char* path, const char* mode);
