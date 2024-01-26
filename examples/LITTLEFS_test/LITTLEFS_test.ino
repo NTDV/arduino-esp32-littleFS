@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include "LittleFileSystem.h"
+#include <LittleFileSystem.h>
 
 // Перед запуском необходимо разметить пространтсво на мкироконтроллере плагином
 //   https://github.com/lorol/arduino-esp32littlefs-plugin
