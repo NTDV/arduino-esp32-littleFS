@@ -9,7 +9,7 @@
 
 #define FORMAT_LITTLEFS_IF_FAILED true
 
-void listDir(ntdv::FileSystem &fs, const char * dirname, const uint8_t levels) {
+void showDirectories(ntdv::FileSystem &fs, const char * dirname, const uint8_t levels) {
   Serial.printf("Listing directory: %s\r\n", dirname);
 
   const ntdv::FileStream root = fs.Open(dirname);
@@ -28,7 +28,7 @@ void listDir(ntdv::FileSystem &fs, const char * dirname, const uint8_t levels) {
       Serial.print("  DIR : ");
       Serial.println(file.Name());
       if(levels){
-        listDir(fs, file.Path(), levels -1);
+        showDirectories(fs, file.Path(), levels -1);
       }
     } else {
       Serial.print("  FILE: ");
@@ -40,7 +40,7 @@ void listDir(ntdv::FileSystem &fs, const char * dirname, const uint8_t levels) {
   }
 }
 
-void createDir(ntdv::FileSystem &fs, const char * path) {
+void createDirectory(ntdv::FileSystem &fs, const char * path) {
   Serial.printf("Creating Dir: %s\n", path);
   if(fs.CreateDirectory(path)){
     Serial.println("Dir created");
@@ -49,7 +49,7 @@ void createDir(ntdv::FileSystem &fs, const char * path) {
   }
 }
 
-void removeDir(ntdv::FileSystem &fs, const char * path) {
+void removeDirectory(ntdv::FileSystem &fs, const char * path) {
   Serial.printf("Removing Dir: %s\n", path);
   if(fs.RemoveDirectory(path)){
     Serial.println("Dir removed");
@@ -126,7 +126,7 @@ void deleteFile(ntdv::FileSystem &fs, const char * path) {
 
 // SPIFFS-like write and delete file, better use #define CONFIG_LITTLEFS_SPIFFS_COMPAT 1
 
-void writeFile2(ntdv::FileSystem &fs, const char * path, const char * message) {
+void writeFile_SPIFFS(ntdv::FileSystem &fs, const char * path, const char * message) {
   if(!fs.Exists(path)){
     if (strchr(path, '/')) {
       Serial.printf("Create missing folders of: %s\r\n", path);
@@ -158,7 +158,7 @@ void writeFile2(ntdv::FileSystem &fs, const char * path, const char * message) {
   file.Close();
 }
 
-void deleteFile2(ntdv::FileSystem &fs, const char * path) {
+void deleteFile_SPIFFS(ntdv::FileSystem &fs, const char * path) {
   Serial.printf("Deleting file and empty folders on path: %s\r\n", path);
 
   if(fs.Remove(path)){
@@ -182,7 +182,7 @@ void deleteFile2(ntdv::FileSystem &fs, const char * path) {
   }
 }
 
-void testFileIO(ntdv::FileSystem &fs, const char * path) {
+void benchIO(ntdv::FileSystem &fs, const char * path) {
   Serial.printf("Testing file I/O with %s\r\n", path);
 
   static uint8_t buf[512];
@@ -239,45 +239,51 @@ void testFileIO(ntdv::FileSystem &fs, const char * path) {
 void setup() {
   Serial.begin(115200);
 
-#ifdef TWOPART
-  if(!LittleFS.Begin(FORMAT_LITTLEFS_IF_FAILED, "/lfs2", 5, "part2")){
+  #ifdef TWOPART
+  if(!LittleFS.Begin(FORMAT_LITTLEFS_IF_FAILED, "/lfs2", "part2")){
     Serial.println("part2 Mount Failed");
     return;
   }
+
   appendFile(LittleFS, "/hello0.txt", "World0!\r\n");
   readFile(LittleFS, "/hello0.txt");
-  LittleFS.end();
+  LittleFS.End();
 
   Serial.println( "Done with part2, work with the first lfs partition..." );
-#endif
+  #endif
 
   if(!LittleFS.Begin(FORMAT_LITTLEFS_IF_FAILED)){
     Serial.println("LittleFS Mount Failed");
     return;
   }
-  Serial.println( "SPIFFS-like write file to new path and delete it w/folders" );
-  writeFile2(LittleFS, "/new1/new2/new3/hello3.txt", "Hello3");
-  listDir(LittleFS, "/", 3);
-  deleteFile2(LittleFS, "/new1/new2/new3/hello3.txt");
 
-  listDir(LittleFS, "/", 3);
-  createDir(LittleFS, "/mydir");
+  Serial.println( "SPIFFS-like write file to new path and delete it w/folders" );
+  writeFile_SPIFFS(LittleFS, "/new1/new2/new3/hello3.txt", "Hello3");
+  showDirectories(LittleFS, "/", 3);
+
+  deleteFile_SPIFFS(LittleFS, "/new1/new2/new3/hello3.txt");
+  showDirectories(LittleFS, "/", 3);
+
+  createDirectory(LittleFS, "/mydir");
   writeFile(LittleFS, "/mydir/hello2.txt", "Hello2");
-  listDir(LittleFS, "/", 1);
+  showDirectories(LittleFS, "/", 1);
+
   deleteFile(LittleFS, "/mydir/hello2.txt");
-  removeDir(LittleFS, "/mydir");
-  listDir(LittleFS, "/", 1);
+  removeDirectory(LittleFS, "/mydir");
+  showDirectories(LittleFS, "/", 1);
+
   writeFile(LittleFS, "/hello.txt", "Hello ");
   appendFile(LittleFS, "/hello.txt", "World!\r\n");
   readFile(LittleFS, "/hello.txt");
+
   renameFile(LittleFS, "/hello.txt", "/foo.txt");
   readFile(LittleFS, "/foo.txt");
   deleteFile(LittleFS, "/foo.txt");
-  testFileIO(LittleFS, "/test.txt");
+
+  benchIO(LittleFS, "/test.txt");
   deleteFile(LittleFS, "/test.txt");
 
-  Serial.println( "Test complete" );
+  Serial.println("Test complete");
 }
 
-void loop() {
-}
+void loop() { }
