@@ -22,3 +22,5 @@ It can be used also for SPIFFS, FatFS not only for LittleFS.
 Add `#include <LittleFileSystem.h>` in the beginning of file. Call special object `LittleFS` as you want.
 
 There are some examples in `examples` folder. For Arduino IDE it can be found at `File -> Examples -> LittleFileSystem`.
+
+Some docs avaliable [here](https://ntdv.github.io/arduino-esp32-littleFS/)
