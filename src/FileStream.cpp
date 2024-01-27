@@ -2,9 +2,9 @@
 
 using namespace ntdv;
 
-size_t FileStream::write(const uint8_t c) {
+size_t FileStream::write(const uint8_t byte) {
   if (!*this) return 0;
-  return _ptr->Write(&c, 1);
+  return _ptr->Write(&byte, 1);
 }
 
 time_t FileStream::GetLastWrite() const {

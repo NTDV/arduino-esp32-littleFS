@@ -14,7 +14,7 @@ FilePtr VirtualFileSystem::Open(const char* path, const char* mode, const bool c
     return FilePtr();
   }
 
-  char* temp = static_cast<char *>(malloc(strlen(path) + strlen(_mountpoint) + 2));
+  const auto temp = static_cast<char *>(malloc(strlen(path) + strlen(_mountpoint) + 2));
   if(!temp) {
     log_e("malloc failed");
     return FilePtr();
@@ -51,9 +51,9 @@ FilePtr VirtualFileSystem::Open(const char* path, const char* mode, const bool c
 
   // Файл не найден, но режим разрешает создать файл или папку
   if(mode && mode[0] != 'r' && create){
-    char *folder = static_cast<char *>(malloc(strlen(path)));
+    const auto folder = static_cast<char *>(malloc(strlen(path)));
 
-    int start_index = 0;
+    constexpr int start_index = 0;
     int end_index = 0;
 
     const char* token = strchr(path+1,'/');
@@ -117,13 +117,13 @@ bool VirtualFileSystem::Rename(const char* pathFrom, const char* pathTo){
     return false;
   }
 
-  size_t mountpointLen = strlen(_mountpoint);
-  char * temp1 = static_cast<char *>(malloc(strlen(pathFrom) + mountpointLen + 1));
+  const size_t mountpointLen = strlen(_mountpoint);
+  const auto temp1 = static_cast<char *>(malloc(strlen(pathFrom) + mountpointLen + 1));
   if(!temp1) {
     log_e("malloc failed");
     return false;
   }
-  char * temp2 = static_cast<char *>(malloc(strlen(pathTo) + mountpointLen + 1));
+  const auto temp2 = static_cast<char *>(malloc(strlen(pathTo) + mountpointLen + 1));
   if(!temp2) {
     free(temp1);
     log_e("malloc failed");
@@ -163,7 +163,7 @@ bool VirtualFileSystem::Remove(const char* path) {
   }
   file.Close();
 
-  char* temp = static_cast<char *>(malloc(strlen(path) + strlen(_mountpoint) + 1));
+  const auto temp = static_cast<char *>(malloc(strlen(path) + strlen(_mountpoint) + 1));
   if(!temp) {
     log_e("malloc failed");
     return false;
@@ -172,7 +172,7 @@ bool VirtualFileSystem::Remove(const char* path) {
   strcpy(temp, _mountpoint);
   strcat(temp, path);
 
-  auto result = unlink(temp);
+  const auto result = unlink(temp);
 
   free(temp);
 
@@ -190,13 +190,15 @@ bool VirtualFileSystem::CreateDirectory(const char *path){
     file.Close();
     log_w("%s already exists", path);
     return true;
-  } else if(file) {
+  }
+
+  if(file) {
     file.Close();
     log_e("%s is a file", path);
     return false;
   }
 
-  char * temp = static_cast<char *>(malloc(strlen(path) + strlen(_mountpoint) + 1));
+  const auto temp = static_cast<char *>(malloc(strlen(path) + strlen(_mountpoint) + 1));
   if(!temp) {
     log_e("malloc failed");
     return false;
@@ -205,7 +207,7 @@ bool VirtualFileSystem::CreateDirectory(const char *path){
   strcpy(temp, _mountpoint);
   strcat(temp, path);
 
-  auto result = mkdir(temp, ACCESSPERMS);
+  const auto result = mkdir(temp, ACCESSPERMS);
 
   free(temp);
 
@@ -231,7 +233,7 @@ bool VirtualFileSystem::RemoveDirectory(const char *path) {
   }
   file.Close();
 
-  char* temp = static_cast<char *>(malloc(strlen(path) + strlen(_mountpoint) + 1));
+  const auto temp = static_cast<char *>(malloc(strlen(path) + strlen(_mountpoint) + 1));
   if(!temp) {
     log_e("malloc failed");
     return false;
@@ -240,7 +242,7 @@ bool VirtualFileSystem::RemoveDirectory(const char *path) {
   strcpy(temp, _mountpoint);
   strcat(temp, path);
 
-  auto result = rmdir(temp);
+  const auto result = rmdir(temp);
 
   free(temp);
 

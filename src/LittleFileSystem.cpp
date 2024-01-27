@@ -81,9 +81,9 @@ bool LittleFileSystem::Begin(const bool formatOnFail, const char *basePath, cons
   return true;
 }
 
-void LittleFileSystem::End() {
+void LittleFileSystem::End() const {
   if(esp_littlefs_mounted(_partitionLabel)){
-    esp_err_t err = esp_vfs_littlefs_unregister(_partitionLabel);
+    const esp_err_t err = esp_vfs_littlefs_unregister(_partitionLabel);
 
     if(err){
       log_e("Unmounting LittleFS failed! Error: %d", err);
@@ -94,9 +94,9 @@ void LittleFileSystem::End() {
   }
 }
 
-bool LittleFileSystem::Format() {
+bool LittleFileSystem::Format() const {
   disableCore0WDT(); // Отключение сторожевого таймера, т.к. форматирование - долгая операция
-  esp_err_t err = esp_littlefs_format(_partitionLabel);
+  const esp_err_t err = esp_littlefs_format(_partitionLabel);
   enableCore0WDT(); // Включение сторожевого таймера
 
   if(err){
@@ -106,7 +106,7 @@ bool LittleFileSystem::Format() {
   return true;
 }
 
-size_t LittleFileSystem::TotalBytes() {
+size_t LittleFileSystem::TotalBytes() const {
   size_t total,used;
   if(esp_littlefs_info(_partitionLabel, &total, &used)){
     return 0;
@@ -114,7 +114,7 @@ size_t LittleFileSystem::TotalBytes() {
   return total;
 }
 
-size_t LittleFileSystem::UsedBytes() {
+size_t LittleFileSystem::UsedBytes() const {
   size_t total,used;
   if(esp_littlefs_info(_partitionLabel, &total, &used)){
     return 0;
