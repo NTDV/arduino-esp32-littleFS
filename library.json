@@ -1,7 +1,0 @@
-{
-  "name": "LittleFileSystem",
-  "version": "1.0.0",
-  "description": "Another Little File System implementation for esp32 core v2.",
-  "frameworks": "arduino",
-  "platforms": "*"
-}

@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['open_0',['Open',['../classntdv_1_1_file_system.html#a5c99a9f6628f38b56d11c8716024397b',1,'ntdv::FileSystem::Open(const char *path, const char *mode=FILE_READ, bool create=false) const'],['../classntdv_1_1_file_system.html#a3048b4c3b41ba000e67ae05cf65cd8d6',1,'ntdv::FileSystem::Open(const String &amp;path, const char *mode=FILE_READ, bool create=false) const'],['../classntdv_1_1_i_file_system.html#ad3dfed892018bf8d32b106ce5568f22b',1,'ntdv::IFileSystem::Open()'],['../classntdv_1_1_virtual_file_system.html#a77c66b57f03a3c32e13ae86ceed5ecea',1,'ntdv::VirtualFileSystem::Open()']]],
+  ['opennextfile_1',['OpenNextFile',['../classntdv_1_1_file_stream.html#a0a61dfcdf1e4681acae9e9f22280674d',1,'ntdv::FileStream::OpenNextFile()'],['../classntdv_1_1_i_file.html#a4de4f0cc849cfd1c0416f5d99bf3d0de',1,'ntdv::IFile::OpenNextFile()'],['../classntdv_1_1_virtual_file.html#aaa30ce1119a9a464cb4ab24add14bd36',1,'ntdv::VirtualFile::OpenNextFile()']]],
+  ['operator_20bool_2',['operator bool',['../classntdv_1_1_file_stream.html#a38f636776a3933af545d4c0de373abbb',1,'ntdv::FileStream::operator bool()'],['../classntdv_1_1_i_file.html#a133e8e099ea9dd97283b5c2bc0d47aeb',1,'ntdv::IFile::operator bool()'],['../classntdv_1_1_virtual_file.html#a99a1e80505ca37a8bcd899a6cb40fcfb',1,'ntdv::VirtualFile::operator bool()']]]
+];

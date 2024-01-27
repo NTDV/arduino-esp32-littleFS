@@ -1,0 +1,861 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>LittleFileSystem: ntdv::FileStream Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="custom.css" rel="stylesheet" type="text/css" />
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">LittleFileSystem
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('classntdv_1_1_file_stream.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="classntdv_1_1_file_stream-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">ntdv::FileStream Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="classntdv_1_1_file_stream.html" title="FileStream class inherits from Stream class.">FileStream</a> class inherits from Stream class.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_file_stream_8h_source.html">FileStream.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for ntdv::FileStream:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classntdv_1_1_file_stream.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:ab290f3c5457435e53e99894209236667" id="r_ab290f3c5457435e53e99894209236667"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab290f3c5457435e53e99894209236667">FileStream</a> (const <a class="el" href="namespacentdv.html#a09b682026745edc98944c617084952b2">FilePtr</a> &amp;ptr=<a class="el" href="namespacentdv.html#a09b682026745edc98944c617084952b2">FilePtr</a>())</td></tr>
+<tr class="separator:ab290f3c5457435e53e99894209236667"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac01d9caca91e032dc273758a8c912153" id="r_ac01d9caca91e032dc273758a8c912153"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac01d9caca91e032dc273758a8c912153">write</a> (uint8_t byte) override</td></tr>
+<tr class="separator:ac01d9caca91e032dc273758a8c912153"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9df1f9925bcdc11951668c89133fe6a4" id="r_a9df1f9925bcdc11951668c89133fe6a4"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9df1f9925bcdc11951668c89133fe6a4">write</a> (const uint8_t *buf, size_t size) override</td></tr>
+<tr class="separator:a9df1f9925bcdc11951668c89133fe6a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a304a5d0efe2e557b7a99640e5a9b663f" id="r_a304a5d0efe2e557b7a99640e5a9b663f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a304a5d0efe2e557b7a99640e5a9b663f">available</a> () override</td></tr>
+<tr class="separator:a304a5d0efe2e557b7a99640e5a9b663f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7afeab093dec8d6245eb3fb9132b4e1c" id="r_a7afeab093dec8d6245eb3fb9132b4e1c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7afeab093dec8d6245eb3fb9132b4e1c">read</a> () override</td></tr>
+<tr class="separator:a7afeab093dec8d6245eb3fb9132b4e1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad95c99a596a13937075000ef7feffd64" id="r_ad95c99a596a13937075000ef7feffd64"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad95c99a596a13937075000ef7feffd64">peek</a> () override</td></tr>
+<tr class="separator:ad95c99a596a13937075000ef7feffd64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a888ef24374e8e96eaa510e72c5dbfb1d" id="r_a888ef24374e8e96eaa510e72c5dbfb1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a888ef24374e8e96eaa510e72c5dbfb1d">flush</a> () override</td></tr>
+<tr class="memdesc:a888ef24374e8e96eaa510e72c5dbfb1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flush the stream.  <br /></td></tr>
+<tr class="separator:a888ef24374e8e96eaa510e72c5dbfb1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7238cb087bda09b43226a42a3815028f" id="r_a7238cb087bda09b43226a42a3815028f"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7238cb087bda09b43226a42a3815028f">Read</a> (uint8_t *buf, size_t size) const</td></tr>
+<tr class="separator:a7238cb087bda09b43226a42a3815028f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28d41603ff8f29176cab1665e8949d38" id="r_a28d41603ff8f29176cab1665e8949d38"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28d41603ff8f29176cab1665e8949d38">ReadBytes</a> (char *buffer, const size_t length) const</td></tr>
+<tr class="separator:a28d41603ff8f29176cab1665e8949d38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae897501e74b3edd2d0158201582f3521" id="r_ae897501e74b3edd2d0158201582f3521"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae897501e74b3edd2d0158201582f3521">Seek</a> (uint32_t pos, <a class="el" href="namespacentdv.html#a27c451fc8392020fb45df21ff63899a2">SeekMode</a> mode) const</td></tr>
+<tr class="separator:ae897501e74b3edd2d0158201582f3521"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af77813367c3b2a360971be744a063ecd" id="r_af77813367c3b2a360971be744a063ecd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af77813367c3b2a360971be744a063ecd">Seek</a> (const uint32_t pos) const</td></tr>
+<tr class="separator:af77813367c3b2a360971be744a063ecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f63668156a57207d2b7ef9345714dfd" id="r_a0f63668156a57207d2b7ef9345714dfd"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f63668156a57207d2b7ef9345714dfd">Position</a> () const</td></tr>
+<tr class="separator:a0f63668156a57207d2b7ef9345714dfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60503abdee9deaefe005d54697d444c5" id="r_a60503abdee9deaefe005d54697d444c5"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60503abdee9deaefe005d54697d444c5">Size</a> () const</td></tr>
+<tr class="separator:a60503abdee9deaefe005d54697d444c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa29fd0e3322b3c210f4235aa2b9d9026" id="r_aa29fd0e3322b3c210f4235aa2b9d9026"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa29fd0e3322b3c210f4235aa2b9d9026">SetBufferSize</a> (size_t size) const</td></tr>
+<tr class="separator:aa29fd0e3322b3c210f4235aa2b9d9026"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f712c2e9016d4bd2066101bd7ff49fe" id="r_a1f712c2e9016d4bd2066101bd7ff49fe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1f712c2e9016d4bd2066101bd7ff49fe">Close</a> ()</td></tr>
+<tr class="memdesc:a1f712c2e9016d4bd2066101bd7ff49fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close the stream.  <br /></td></tr>
+<tr class="separator:a1f712c2e9016d4bd2066101bd7ff49fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38f636776a3933af545d4c0de373abbb" id="r_a38f636776a3933af545d4c0de373abbb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38f636776a3933af545d4c0de373abbb">operator bool</a> () const</td></tr>
+<tr class="separator:a38f636776a3933af545d4c0de373abbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8173fc6144cadf029cd3426c9277420a" id="r_a8173fc6144cadf029cd3426c9277420a"><td class="memItemLeft" align="right" valign="top">time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8173fc6144cadf029cd3426c9277420a">GetLastWrite</a> () const</td></tr>
+<tr class="separator:a8173fc6144cadf029cd3426c9277420a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e447028ac4eca4c3f4cdbb384429a1d" id="r_a8e447028ac4eca4c3f4cdbb384429a1d"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8e447028ac4eca4c3f4cdbb384429a1d">Path</a> () const</td></tr>
+<tr class="separator:a8e447028ac4eca4c3f4cdbb384429a1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7586f7d4ce15807bed92161cdf900ab" id="r_ad7586f7d4ce15807bed92161cdf900ab"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad7586f7d4ce15807bed92161cdf900ab">Name</a> () const</td></tr>
+<tr class="separator:ad7586f7d4ce15807bed92161cdf900ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe4b78537b3fefd73ae80b522529a042" id="r_afe4b78537b3fefd73ae80b522529a042"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe4b78537b3fefd73ae80b522529a042">IsDirectory</a> () const</td></tr>
+<tr class="separator:afe4b78537b3fefd73ae80b522529a042"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9092031c6b5e8273d6117a8f46ec2a0" id="r_af9092031c6b5e8273d6117a8f46ec2a0"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9092031c6b5e8273d6117a8f46ec2a0">SeekDir</a> (long position) const</td></tr>
+<tr class="separator:af9092031c6b5e8273d6117a8f46ec2a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a61dfcdf1e4681acae9e9f22280674d" id="r_a0a61dfcdf1e4681acae9e9f22280674d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classntdv_1_1_file_stream.html">FileStream</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a61dfcdf1e4681acae9e9f22280674d">OpenNextFile</a> (const char *mode=<a class="el" href="_i_file_8h.html#ad52d51659a75e25d96fb04d22ff718cb">FILE_READ</a>) const</td></tr>
+<tr class="separator:a0a61dfcdf1e4681acae9e9f22280674d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76077628ad1fde0a9c25883085110d05" id="r_a76077628ad1fde0a9c25883085110d05"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a76077628ad1fde0a9c25883085110d05">GetNextFileName</a> () const</td></tr>
+<tr class="separator:a76077628ad1fde0a9c25883085110d05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23e85e9779b0e9ecec4a51c5732c6bac" id="r_a23e85e9779b0e9ecec4a51c5732c6bac"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a23e85e9779b0e9ecec4a51c5732c6bac">GetNextFileName</a> (boolean *isDir) const</td></tr>
+<tr class="separator:a23e85e9779b0e9ecec4a51c5732c6bac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfa38d65a4b80465ab4fed686487829a" id="r_acfa38d65a4b80465ab4fed686487829a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acfa38d65a4b80465ab4fed686487829a">RewindDirectory</a> () const</td></tr>
+<tr class="memdesc:acfa38d65a4b80465ab4fed686487829a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Go to the begining of the directory.  <br /></td></tr>
+<tr class="separator:acfa38d65a4b80465ab4fed686487829a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a89099ccb365bda59159f6676195a4b12" id="r_a89099ccb365bda59159f6676195a4b12"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacentdv.html#a09b682026745edc98944c617084952b2">FilePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89099ccb365bda59159f6676195a4b12">_ptr</a></td></tr>
+<tr class="memdesc:a89099ccb365bda59159f6676195a4b12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shared pointer to an <a class="el" href="classntdv_1_1_i_file.html" title="Interface for a file.">IFile</a> object.  <br /></td></tr>
+<tr class="separator:a89099ccb365bda59159f6676195a4b12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classntdv_1_1_file_stream.html" title="FileStream class inherits from Stream class.">FileStream</a> class inherits from Stream class. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ab290f3c5457435e53e99894209236667" name="ab290f3c5457435e53e99894209236667"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab290f3c5457435e53e99894209236667">&#9670;&#160;</a></span>FileStream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ntdv::FileStream::FileStream </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacentdv.html#a09b682026745edc98944c617084952b2">FilePtr</a> &amp;</td>          <td class="paramname"><span class="paramname"><em>ptr</em><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="namespacentdv.html#a09b682026745edc98944c617084952b2">FilePtr</a>()</span></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Constructor </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptr</td><td>- shared pointer to an <a class="el" href="classntdv_1_1_i_file.html" title="Interface for a file.">IFile</a> object </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a304a5d0efe2e557b7a99640e5a9b663f" name="a304a5d0efe2e557b7a99640e5a9b663f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a304a5d0efe2e557b7a99640e5a9b663f">&#9670;&#160;</a></span>available()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FileStream::available </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Check the number of bytes available for reading </p><dl class="section return"><dt>Returns</dt><dd>the number of bytes available </dd></dl>
+
+</div>
+</div>
+<a id="a1f712c2e9016d4bd2066101bd7ff49fe" name="a1f712c2e9016d4bd2066101bd7ff49fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f712c2e9016d4bd2066101bd7ff49fe">&#9670;&#160;</a></span>Close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FileStream::Close </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Close the stream. </p>
+
+</div>
+</div>
+<a id="a888ef24374e8e96eaa510e72c5dbfb1d" name="a888ef24374e8e96eaa510e72c5dbfb1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a888ef24374e8e96eaa510e72c5dbfb1d">&#9670;&#160;</a></span>flush()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FileStream::flush </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flush the stream. </p>
+
+</div>
+</div>
+<a id="a8173fc6144cadf029cd3426c9277420a" name="a8173fc6144cadf029cd3426c9277420a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8173fc6144cadf029cd3426c9277420a">&#9670;&#160;</a></span>GetLastWrite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">time_t FileStream::GetLastWrite </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the last write time of the stream </p><dl class="section return"><dt>Returns</dt><dd>the last write time </dd></dl>
+
+</div>
+</div>
+<a id="a76077628ad1fde0a9c25883085110d05" name="a76077628ad1fde0a9c25883085110d05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76077628ad1fde0a9c25883085110d05">&#9670;&#160;</a></span>GetNextFileName() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String FileStream::GetNextFileName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the name of the next file in the directory </p><dl class="section return"><dt>Returns</dt><dd>the name of the next file </dd></dl>
+
+</div>
+</div>
+<a id="a23e85e9779b0e9ecec4a51c5732c6bac" name="a23e85e9779b0e9ecec4a51c5732c6bac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23e85e9779b0e9ecec4a51c5732c6bac">&#9670;&#160;</a></span>GetNextFileName() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String FileStream::GetNextFileName </td>
+          <td>(</td>
+          <td class="paramtype">boolean *</td>          <td class="paramname"><span class="paramname"><em>isDir</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the name of the next file in the directory and whether it is a directory </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">isDir</td><td>- pointer to a boolean to store whether the file is a directory </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the name of the next file </dd></dl>
+
+</div>
+</div>
+<a id="afe4b78537b3fefd73ae80b522529a042" name="afe4b78537b3fefd73ae80b522529a042"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe4b78537b3fefd73ae80b522529a042">&#9670;&#160;</a></span>IsDirectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean FileStream::IsDirectory </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if the stream is a directory </p><dl class="section return"><dt>Returns</dt><dd>true if the stream is a directory, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="ad7586f7d4ce15807bed92161cdf900ab" name="ad7586f7d4ce15807bed92161cdf900ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7586f7d4ce15807bed92161cdf900ab">&#9670;&#160;</a></span>Name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * FileStream::Name </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the name of the stream </p><dl class="section return"><dt>Returns</dt><dd>the stream name </dd></dl>
+
+</div>
+</div>
+<a id="a0a61dfcdf1e4681acae9e9f22280674d" name="a0a61dfcdf1e4681acae9e9f22280674d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a61dfcdf1e4681acae9e9f22280674d">&#9670;&#160;</a></span>OpenNextFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classntdv_1_1_file_stream.html">FileStream</a> FileStream::OpenNextFile </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>mode</em><span class="paramdefsep"> = </span><span class="paramdefval"><a class="el" href="_i_file_8h.html#ad52d51659a75e25d96fb04d22ff718cb">FILE_READ</a></span></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Open the next file in the directory </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>- mode to open the file in </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="classntdv_1_1_file_stream.html" title="FileStream class inherits from Stream class.">FileStream</a> object for the opened file </dd></dl>
+
+</div>
+</div>
+<a id="a38f636776a3933af545d4c0de373abbb" name="a38f636776a3933af545d4c0de373abbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38f636776a3933af545d4c0de373abbb">&#9670;&#160;</a></span>operator bool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FileStream::operator bool </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if the stream is valid </p><dl class="section return"><dt>Returns</dt><dd>true if the stream is valid, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a8e447028ac4eca4c3f4cdbb384429a1d" name="a8e447028ac4eca4c3f4cdbb384429a1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e447028ac4eca4c3f4cdbb384429a1d">&#9670;&#160;</a></span>Path()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * FileStream::Path </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the path of the stream </p><dl class="section return"><dt>Returns</dt><dd>the stream path </dd></dl>
+
+</div>
+</div>
+<a id="ad95c99a596a13937075000ef7feffd64" name="ad95c99a596a13937075000ef7feffd64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad95c99a596a13937075000ef7feffd64">&#9670;&#160;</a></span>peek()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FileStream::peek </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Peek at the next byte in the stream </p><dl class="section return"><dt>Returns</dt><dd>the next byte </dd></dl>
+
+</div>
+</div>
+<a id="a0f63668156a57207d2b7ef9345714dfd" name="a0f63668156a57207d2b7ef9345714dfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f63668156a57207d2b7ef9345714dfd">&#9670;&#160;</a></span>Position()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t FileStream::Position </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the current position in the stream </p><dl class="section return"><dt>Returns</dt><dd>the current position </dd></dl>
+
+</div>
+</div>
+<a id="a7afeab093dec8d6245eb3fb9132b4e1c" name="a7afeab093dec8d6245eb3fb9132b4e1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7afeab093dec8d6245eb3fb9132b4e1c">&#9670;&#160;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int FileStream::read </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Read a byte from the stream </p><dl class="section return"><dt>Returns</dt><dd>the byte read </dd></dl>
+
+</div>
+</div>
+<a id="a7238cb087bda09b43226a42a3815028f" name="a7238cb087bda09b43226a42a3815028f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7238cb087bda09b43226a42a3815028f">&#9670;&#160;</a></span>Read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t FileStream::Read </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>buf</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Read data from the stream </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buf</td><td>- buffer to store the data </td></tr>
+    <tr><td class="paramname">size</td><td>- size of the data to read </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the number of bytes read </dd></dl>
+
+</div>
+</div>
+<a id="a28d41603ff8f29176cab1665e8949d38" name="a28d41603ff8f29176cab1665e8949d38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28d41603ff8f29176cab1665e8949d38">&#9670;&#160;</a></span>ReadBytes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t ntdv::FileStream::ReadBytes </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>buffer</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const size_t</td>          <td class="paramname"><span class="paramname"><em>length</em></span>&#160;) const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Read data from the stream </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buffer</td><td>- buffer to store the data </td></tr>
+    <tr><td class="paramname">length</td><td>- size of the data to read </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the number of bytes read </dd></dl>
+
+</div>
+</div>
+<a id="acfa38d65a4b80465ab4fed686487829a" name="acfa38d65a4b80465ab4fed686487829a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfa38d65a4b80465ab4fed686487829a">&#9670;&#160;</a></span>RewindDirectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FileStream::RewindDirectory </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Go to the begining of the directory. </p>
+
+</div>
+</div>
+<a id="af77813367c3b2a360971be744a063ecd" name="af77813367c3b2a360971be744a063ecd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af77813367c3b2a360971be744a063ecd">&#9670;&#160;</a></span>Seek() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ntdv::FileStream::Seek </td>
+          <td>(</td>
+          <td class="paramtype">const uint32_t</td>          <td class="paramname"><span class="paramname"><em>pos</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Seek to a position in the stream </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>- position to seek to </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="ae897501e74b3edd2d0158201582f3521" name="ae897501e74b3edd2d0158201582f3521"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae897501e74b3edd2d0158201582f3521">&#9670;&#160;</a></span>Seek() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FileStream::Seek </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>pos</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacentdv.html#a27c451fc8392020fb45df21ff63899a2">SeekMode</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span>&#160;) const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set a position in the stream </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>- position to seek to </td></tr>
+    <tr><td class="paramname">mode</td><td>- mode of seeking </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="af9092031c6b5e8273d6117a8f46ec2a0" name="af9092031c6b5e8273d6117a8f46ec2a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9092031c6b5e8273d6117a8f46ec2a0">&#9670;&#160;</a></span>SeekDir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean FileStream::SeekDir </td>
+          <td>(</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>position</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Seek to a position in the directory </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>- position to seek to </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="aa29fd0e3322b3c210f4235aa2b9d9026" name="aa29fd0e3322b3c210f4235aa2b9d9026"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa29fd0e3322b3c210f4235aa2b9d9026">&#9670;&#160;</a></span>SetBufferSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool FileStream::SetBufferSize </td>
+          <td>(</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set the buffer size for the stream </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>- size of the buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful, false otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a60503abdee9deaefe005d54697d444c5" name="a60503abdee9deaefe005d54697d444c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60503abdee9deaefe005d54697d444c5">&#9670;&#160;</a></span>Size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t FileStream::Size </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get the size of the stream </p><dl class="section return"><dt>Returns</dt><dd>the size of the stream </dd></dl>
+
+</div>
+</div>
+<a id="a9df1f9925bcdc11951668c89133fe6a4" name="a9df1f9925bcdc11951668c89133fe6a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9df1f9925bcdc11951668c89133fe6a4">&#9670;&#160;</a></span>write() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t FileStream::write </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t *</td>          <td class="paramname"><span class="paramname"><em>buf</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Write data to the stream </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buf</td><td>- buffer containing the data </td></tr>
+    <tr><td class="paramname">size</td><td>- size of the data </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the number of bytes written </dd></dl>
+
+</div>
+</div>
+<a id="ac01d9caca91e032dc273758a8c912153" name="ac01d9caca91e032dc273758a8c912153"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac01d9caca91e032dc273758a8c912153">&#9670;&#160;</a></span>write() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t FileStream::write </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>byte</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Write a byte to the stream </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">byte</td><td>- the byte to write </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the number of bytes written </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a89099ccb365bda59159f6676195a4b12" name="a89099ccb365bda59159f6676195a4b12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89099ccb365bda59159f6676195a4b12">&#9670;&#160;</a></span>_ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacentdv.html#a09b682026745edc98944c617084952b2">FilePtr</a> ntdv::FileStream::_ptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Shared pointer to an <a class="el" href="classntdv_1_1_i_file.html" title="Interface for a file.">IFile</a> object. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="_file_stream_8h_source.html">FileStream.h</a></li>
+<li><a class="el" href="_file_stream_8cpp.html">FileStream.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacentdv.html">ntdv</a></li><li class="navelem"><a class="el" href="classntdv_1_1_file_stream.html">FileStream</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
+</body>
+</html>

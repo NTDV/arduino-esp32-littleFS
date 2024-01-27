@@ -1,0 +1,13 @@
+digraph "ntdv::VirtualFile::getStat"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  rankdir="RL";
+  Node1 [id="Node000001",label="ntdv::VirtualFile::\lgetStat",height=0.2,width=0.4,color="gray40", fillcolor="grey60", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [id="edge1_Node000001_Node000002",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node2 [id="Node000002",label="ntdv::VirtualFile::\lGetLastWrite",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classntdv_1_1_virtual_file.html#a4eb0a01d4279db18080fd1afb6bd0780",tooltip=" "];
+  Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node3 [id="Node000003",label="ntdv::VirtualFile::Size",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classntdv_1_1_virtual_file.html#ab622b31cd10dcebd342e56b7d4109581",tooltip=" "];
+}

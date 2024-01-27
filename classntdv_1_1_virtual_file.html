@@ -1,0 +1,1070 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.10.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- BEGIN opengraph metadata -->
+<meta property="og:title" content="Doxygen Awesome" />
+<meta property="og:image" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta property="og:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<meta property="og:url" content="https://jothepro.github.io/doxygen-awesome-css/" />
+<!-- END opengraph metadata -->
+<!-- BEGIN twitter metadata -->
+<meta name="twitter:image:src" content="https://repository-images.githubusercontent.com/348492097/4f16df80-88fb-11eb-9d31-4015ff22c452" />
+<meta name="twitter:title" content="Doxygen Awesome" />
+<meta name="twitter:description" content="Custom CSS theme for doxygen html-documentation with lots of customization parameters." />
+<!-- END twitter metadata -->
+<title>LittleFileSystem: ntdv::VirtualFile Class Reference</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="icon" type="image/svg+xml" href="logo.drawio.svg"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="doxygen-awesome-darkmode-toggle.js"></script>
+<script type="text/javascript" src="doxygen-awesome-fragment-copy-button.js"></script>
+<script type="text/javascript" src="doxygen-awesome-paragraph-link.js"></script>
+<script type="text/javascript" src="doxygen-awesome-interactive-toc.js"></script>
+<script type="text/javascript" src="doxygen-awesome-tabs.js"></script>
+<script type="text/javascript" src="toggle-alternative-theme.js"></script>
+<script type="text/javascript">
+    DoxygenAwesomeFragmentCopyButton.init()
+    DoxygenAwesomeDarkModeToggle.init()
+    DoxygenAwesomeParagraphLink.init()
+    DoxygenAwesomeInteractiveToc.init()
+    DoxygenAwesomeTabs.init()
+</script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="custom.css" rel="stylesheet" type="text/css" />
+<link href="custom-alternative.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<link href="custom.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- https://tholman.com/github-corners/ -->
+<a href="https://github.com/jothepro/doxygen-awesome-css" class="github-corner" title="View source on GitHub" target="_blank" rel="noopener noreferrer">
+    <svg viewBox="0 0 250 250" width="40" height="40" style="position: absolute; top: 0; border: 0; right: 0; z-index: 99;" aria-hidden="true">
+    <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">LittleFileSystem
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.10.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('classntdv_1_1_virtual_file.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Loading...</div>
+<div class="SRStatus" id="Searching">Searching...</div>
+<div class="SRStatus" id="NoMatches">No Matches</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
+<a href="classntdv_1_1_virtual_file-members.html">List of all members</a>  </div>
+  <div class="headertitle"><div class="title">ntdv::VirtualFile Class Reference</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><a class="el" href="classntdv_1_1_virtual_file.html" title="VirtualFile class provides an interface for file operations in a virtual file system.">VirtualFile</a> class provides an interface for file operations in a virtual file system.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_virtual_file_8h_source.html">VirtualFile.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for ntdv::VirtualFile:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="classntdv_1_1_virtual_file.png" usemap="#ntdv::VirtualFile_map" alt=""/>
+  <map id="ntdv::VirtualFile_map" name="ntdv::VirtualFile_map">
+<area href="classntdv_1_1_i_file.html" title="Interface for a file." alt="ntdv::IFile" shape="rect" coords="0,0,100,24"/>
+  </map>
+</div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a2435da1c09ea859c79a8884efabd2133" id="r_a2435da1c09ea859c79a8884efabd2133"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2435da1c09ea859c79a8884efabd2133">VirtualFile</a> (<a class="el" href="classntdv_1_1_virtual_file_system.html">VirtualFileSystem</a> *fs, const char *path, const char *mode)</td></tr>
+<tr class="separator:a2435da1c09ea859c79a8884efabd2133"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1dbe273b24d123760881476daf2063af" id="r_a1dbe273b24d123760881476daf2063af"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1dbe273b24d123760881476daf2063af">~VirtualFile</a> () override</td></tr>
+<tr class="memdesc:a1dbe273b24d123760881476daf2063af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
+<tr class="separator:a1dbe273b24d123760881476daf2063af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b7a1eff1f0ec4b7fe93f70844907b83" id="r_a7b7a1eff1f0ec4b7fe93f70844907b83"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b7a1eff1f0ec4b7fe93f70844907b83">Write</a> (const uint8_t *buf, size_t size) override</td></tr>
+<tr class="separator:a7b7a1eff1f0ec4b7fe93f70844907b83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed84f16a401e9a13e500518bb6c76728" id="r_aed84f16a401e9a13e500518bb6c76728"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed84f16a401e9a13e500518bb6c76728">Read</a> (uint8_t *buf, size_t size) override</td></tr>
+<tr class="separator:aed84f16a401e9a13e500518bb6c76728"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab49bcd5c729314735bcea32f9b5866c5" id="r_ab49bcd5c729314735bcea32f9b5866c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab49bcd5c729314735bcea32f9b5866c5">Flush</a> () override</td></tr>
+<tr class="memdesc:ab49bcd5c729314735bcea32f9b5866c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flush the file buffer.  <br /></td></tr>
+<tr class="separator:ab49bcd5c729314735bcea32f9b5866c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a722c1c3f3e21cc969f2cca4d02756e53" id="r_a722c1c3f3e21cc969f2cca4d02756e53"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a722c1c3f3e21cc969f2cca4d02756e53">Seek</a> (uint32_t pos, <a class="el" href="namespacentdv.html#a27c451fc8392020fb45df21ff63899a2">SeekMode</a> mode) override</td></tr>
+<tr class="separator:a722c1c3f3e21cc969f2cca4d02756e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a620f27e91732ff2669fb4e6e6676a953" id="r_a620f27e91732ff2669fb4e6e6676a953"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a620f27e91732ff2669fb4e6e6676a953">Position</a> () const override</td></tr>
+<tr class="separator:a620f27e91732ff2669fb4e6e6676a953"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab622b31cd10dcebd342e56b7d4109581" id="r_ab622b31cd10dcebd342e56b7d4109581"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab622b31cd10dcebd342e56b7d4109581">Size</a> () const override</td></tr>
+<tr class="separator:ab622b31cd10dcebd342e56b7d4109581"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a062919e4e69f7c6acec1813aa526d3dd" id="r_a062919e4e69f7c6acec1813aa526d3dd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a062919e4e69f7c6acec1813aa526d3dd">SetBufferSize</a> (size_t size) override</td></tr>
+<tr class="separator:a062919e4e69f7c6acec1813aa526d3dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0596a64b4c59947b14bbc08147280a92" id="r_a0596a64b4c59947b14bbc08147280a92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0596a64b4c59947b14bbc08147280a92">Close</a> () override</td></tr>
+<tr class="memdesc:a0596a64b4c59947b14bbc08147280a92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close the file.  <br /></td></tr>
+<tr class="separator:a0596a64b4c59947b14bbc08147280a92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eb0a01d4279db18080fd1afb6bd0780" id="r_a4eb0a01d4279db18080fd1afb6bd0780"><td class="memItemLeft" align="right" valign="top">time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4eb0a01d4279db18080fd1afb6bd0780">GetLastWrite</a> () override</td></tr>
+<tr class="separator:a4eb0a01d4279db18080fd1afb6bd0780"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cee914dd8db1c08bb7a9b3a64f43e77" id="r_a8cee914dd8db1c08bb7a9b3a64f43e77"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8cee914dd8db1c08bb7a9b3a64f43e77">Path</a> () const override</td></tr>
+<tr class="separator:a8cee914dd8db1c08bb7a9b3a64f43e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebf72d3af36e2e527f2fefba085e569b" id="r_aebf72d3af36e2e527f2fefba085e569b"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aebf72d3af36e2e527f2fefba085e569b">Name</a> () const override</td></tr>
+<tr class="separator:aebf72d3af36e2e527f2fefba085e569b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d5f9881d0a998d67e8a7f6282741959" id="r_a2d5f9881d0a998d67e8a7f6282741959"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d5f9881d0a998d67e8a7f6282741959">IsDirectory</a> () override</td></tr>
+<tr class="separator:a2d5f9881d0a998d67e8a7f6282741959"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa30ce1119a9a464cb4ab24add14bd36" id="r_aaa30ce1119a9a464cb4ab24add14bd36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacentdv.html#a09b682026745edc98944c617084952b2">FilePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa30ce1119a9a464cb4ab24add14bd36">OpenNextFile</a> (const char *mode) override</td></tr>
+<tr class="separator:aaa30ce1119a9a464cb4ab24add14bd36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acda70b559357a783c69e61e2bf196906" id="r_acda70b559357a783c69e61e2bf196906"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acda70b559357a783c69e61e2bf196906">SeekDir</a> (long position) override</td></tr>
+<tr class="separator:acda70b559357a783c69e61e2bf196906"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3173560e65ffb368c08fd51a1585463c" id="r_a3173560e65ffb368c08fd51a1585463c"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3173560e65ffb368c08fd51a1585463c">GetNextFileName</a> () override</td></tr>
+<tr class="separator:a3173560e65ffb368c08fd51a1585463c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a75635040aaa87c2d26cd007d2fd123" id="r_a7a75635040aaa87c2d26cd007d2fd123"><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7a75635040aaa87c2d26cd007d2fd123">GetNextFileName</a> (bool *isDir) override</td></tr>
+<tr class="separator:a7a75635040aaa87c2d26cd007d2fd123"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7930a3ac5dceb9b33bf44426a2c4d74f" id="r_a7930a3ac5dceb9b33bf44426a2c4d74f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7930a3ac5dceb9b33bf44426a2c4d74f">RewindDirectory</a> () override</td></tr>
+<tr class="memdesc:a7930a3ac5dceb9b33bf44426a2c4d74f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Go to the begining of the directory.  <br /></td></tr>
+<tr class="separator:a7930a3ac5dceb9b33bf44426a2c4d74f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99a1e80505ca37a8bcd899a6cb40fcfb" id="r_a99a1e80505ca37a8bcd899a6cb40fcfb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99a1e80505ca37a8bcd899a6cb40fcfb">operator bool</a> () override</td></tr>
+<tr class="separator:a99a1e80505ca37a8bcd899a6cb40fcfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classntdv_1_1_i_file"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classntdv_1_1_i_file')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classntdv_1_1_i_file.html">ntdv::IFile</a></td></tr>
+<tr class="memitem:a26875316e2d3d5587e29c87e3683cdd7 inherit pub_methods_classntdv_1_1_i_file" id="r_a26875316e2d3d5587e29c87e3683cdd7"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classntdv_1_1_i_file.html#a26875316e2d3d5587e29c87e3683cdd7">~IFile</a> ()=default</td></tr>
+<tr class="memdesc:a26875316e2d3d5587e29c87e3683cdd7 inherit pub_methods_classntdv_1_1_i_file"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor.  <br /></td></tr>
+<tr class="separator:a26875316e2d3d5587e29c87e3683cdd7 inherit pub_methods_classntdv_1_1_i_file"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:af97bd144e55080708029fb6707de1983" id="r_af97bd144e55080708029fb6707de1983"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af97bd144e55080708029fb6707de1983">getStat</a> () const</td></tr>
+<tr class="memdesc:af97bd144e55080708029fb6707de1983"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the file status information.  <br /></td></tr>
+<tr class="separator:af97bd144e55080708029fb6707de1983"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a7d9bdb66ba1b6a433b5cf91f16958ceb" id="r_a7d9bdb66ba1b6a433b5cf91f16958ceb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classntdv_1_1_virtual_file_system.html">VirtualFileSystem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d9bdb66ba1b6a433b5cf91f16958ceb">_fs</a></td></tr>
+<tr class="memdesc:a7d9bdb66ba1b6a433b5cf91f16958ceb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the virtual file system.  <br /></td></tr>
+<tr class="separator:a7d9bdb66ba1b6a433b5cf91f16958ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa5be93f1c0bab967269383ba5ffb09e" id="r_afa5be93f1c0bab967269383ba5ffb09e"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afa5be93f1c0bab967269383ba5ffb09e">_file</a></td></tr>
+<tr class="memdesc:afa5be93f1c0bab967269383ba5ffb09e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the file.  <br /></td></tr>
+<tr class="separator:afa5be93f1c0bab967269383ba5ffb09e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45c3a6701844d56f5fa0a2e88eb03e93" id="r_a45c3a6701844d56f5fa0a2e88eb03e93"><td class="memItemLeft" align="right" valign="top">DIR *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45c3a6701844d56f5fa0a2e88eb03e93">_dir</a></td></tr>
+<tr class="memdesc:a45c3a6701844d56f5fa0a2e88eb03e93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the directory.  <br /></td></tr>
+<tr class="separator:a45c3a6701844d56f5fa0a2e88eb03e93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af319e5bb69b1a45afa42a32653290de0" id="r_af319e5bb69b1a45afa42a32653290de0"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af319e5bb69b1a45afa42a32653290de0">_path</a></td></tr>
+<tr class="memdesc:af319e5bb69b1a45afa42a32653290de0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Path of the file.  <br /></td></tr>
+<tr class="separator:af319e5bb69b1a45afa42a32653290de0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35e6d0ba9db39b31c19cad6bfebbe71a" id="r_a35e6d0ba9db39b31c19cad6bfebbe71a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35e6d0ba9db39b31c19cad6bfebbe71a">_isDirectory</a></td></tr>
+<tr class="memdesc:a35e6d0ba9db39b31c19cad6bfebbe71a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the file is a directory.  <br /></td></tr>
+<tr class="separator:a35e6d0ba9db39b31c19cad6bfebbe71a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ec5deab30a1edbb632109f8bea1caac" id="r_a6ec5deab30a1edbb632109f8bea1caac"><td class="memItemLeft" align="right" valign="top">struct stat&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6ec5deab30a1edbb632109f8bea1caac">_stat</a></td></tr>
+<tr class="memdesc:a6ec5deab30a1edbb632109f8bea1caac"><td class="mdescLeft">&#160;</td><td class="mdescRight">File status information.  <br /></td></tr>
+<tr class="separator:a6ec5deab30a1edbb632109f8bea1caac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab984ff3d3fe134f2015faf67eac9bb68" id="r_ab984ff3d3fe134f2015faf67eac9bb68"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab984ff3d3fe134f2015faf67eac9bb68">_written</a></td></tr>
+<tr class="memdesc:ab984ff3d3fe134f2015faf67eac9bb68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether the file has been written to.  <br /></td></tr>
+<tr class="separator:ab984ff3d3fe134f2015faf67eac9bb68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classntdv_1_1_virtual_file.html" title="VirtualFile class provides an interface for file operations in a virtual file system.">VirtualFile</a> class provides an interface for file operations in a virtual file system. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a2435da1c09ea859c79a8884efabd2133" name="a2435da1c09ea859c79a8884efabd2133"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2435da1c09ea859c79a8884efabd2133">&#9670;&#160;</a></span>VirtualFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">VirtualFile::VirtualFile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classntdv_1_1_virtual_file_system.html">VirtualFileSystem</a> *</td>          <td class="paramname"><span class="paramname"><em>fs</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>path</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>mode</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Constructor </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fs</td><td>- pointer to the virtual file system </td></tr>
+    <tr><td class="paramname">path</td><td>- path of the file </td></tr>
+    <tr><td class="paramname">mode</td><td>- mode to open the file in </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1dbe273b24d123760881476daf2063af" name="a1dbe273b24d123760881476daf2063af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dbe273b24d123760881476daf2063af">&#9670;&#160;</a></span>~VirtualFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VirtualFile::~VirtualFile </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a0596a64b4c59947b14bbc08147280a92" name="a0596a64b4c59947b14bbc08147280a92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0596a64b4c59947b14bbc08147280a92">&#9670;&#160;</a></span>Close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VirtualFile::Close </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Close the file. </p>
+
+<p>Implements <a class="el" href="classntdv_1_1_i_file.html#abc7ec5d81b663a491affae48746f1583">ntdv::IFile</a>.</p>
+
+</div>
+</div>
+<a id="ab49bcd5c729314735bcea32f9b5866c5" name="ab49bcd5c729314735bcea32f9b5866c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab49bcd5c729314735bcea32f9b5866c5">&#9670;&#160;</a></span>Flush()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VirtualFile::Flush </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flush the file buffer. </p>
+
+<p>Implements <a class="el" href="classntdv_1_1_i_file.html#a7e30e7fcbd9c470a7009ab70643c4540">ntdv::IFile</a>.</p>
+
+</div>
+</div>
+<a id="a4eb0a01d4279db18080fd1afb6bd0780" name="a4eb0a01d4279db18080fd1afb6bd0780"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4eb0a01d4279db18080fd1afb6bd0780">&#9670;&#160;</a></span>GetLastWrite()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">time_t VirtualFile::GetLastWrite </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the last write time of the file </p><dl class="section return"><dt>Returns</dt><dd>the last write time </dd></dl>
+
+<p>Implements <a class="el" href="classntdv_1_1_i_file.html#acb61c5a9c91356ed61327d69870ae3fb">ntdv::IFile</a>.</p>
+
+</div>
+</div>
+<a id="a3173560e65ffb368c08fd51a1585463c" name="a3173560e65ffb368c08fd51a1585463c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3173560e65ffb368c08fd51a1585463c">&#9670;&#160;</a></span>GetNextFileName() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String VirtualFile::GetNextFileName </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the name of the next file in the directory </p><dl class="section return"><dt>Returns</dt><dd>the name of the next file </dd></dl>
+
+<p>Implements <a class="el" href="classntdv_1_1_i_file.html#a2e8c520bcc911d299ab6c88069f3645c">ntdv::IFile</a>.</p>
+
+</div>
+</div>
+<a id="a7a75635040aaa87c2d26cd007d2fd123" name="a7a75635040aaa87c2d26cd007d2fd123"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a75635040aaa87c2d26cd007d2fd123">&#9670;&#160;</a></span>GetNextFileName() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">String VirtualFile::GetNextFileName </td>
+          <td>(</td>
+          <td class="paramtype">bool *</td>          <td class="paramname"><span class="paramname"><em>isDir</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the name of the next file in the directory and whether it is a directory </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">isDir</td><td>- pointer to a boolean to store whether the file is a directory </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the name of the next file </dd></dl>
+
+<p>Implements <a class="el" href="classntdv_1_1_i_file.html#ad40391f0a9b68aac793829cb867a15bd">ntdv::IFile</a>.</p>
+
+</div>
+</div>
+<a id="af97bd144e55080708029fb6707de1983" name="af97bd144e55080708029fb6707de1983"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af97bd144e55080708029fb6707de1983">&#9670;&#160;</a></span>getStat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VirtualFile::getStat </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the file status information. </p>
+
+</div>
+</div>
+<a id="a2d5f9881d0a998d67e8a7f6282741959" name="a2d5f9881d0a998d67e8a7f6282741959"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d5f9881d0a998d67e8a7f6282741959">&#9670;&#160;</a></span>IsDirectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean VirtualFile::IsDirectory </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Check if the file is a directory </p><dl class="section return"><dt>Returns</dt><dd>true if the file is a directory, false otherwise </dd></dl>
+
+<p>Implements <a class="el" href="classntdv_1_1_i_file.html#a909df41fa58d387239fb10e8625d1c94">ntdv::IFile</a>.</p>
+
+</div>
+</div>
+<a id="aebf72d3af36e2e527f2fefba085e569b" name="aebf72d3af36e2e527f2fefba085e569b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aebf72d3af36e2e527f2fefba085e569b">&#9670;&#160;</a></span>Name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * VirtualFile::Name </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the name of the file </p><dl class="section return"><dt>Returns</dt><dd>the file name </dd></dl>
+
+<p>Implements <a class="el" href="classntdv_1_1_i_file.html#ae37c335ade5d46ee03ec3586efc9eb6d">ntdv::IFile</a>.</p>
+
+</div>
+</div>
+<a id="aaa30ce1119a9a464cb4ab24add14bd36" name="aaa30ce1119a9a464cb4ab24add14bd36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa30ce1119a9a464cb4ab24add14bd36">&#9670;&#160;</a></span>OpenNextFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespacentdv.html#a09b682026745edc98944c617084952b2">FilePtr</a> VirtualFile::OpenNextFile </td>
+          <td>(</td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>mode</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Open the next file in the directory </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mode</td><td>- mode to open the file in </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a shared pointer to the opened file </dd></dl>
+
+<p>Implements <a class="el" href="classntdv_1_1_i_file.html#a4de4f0cc849cfd1c0416f5d99bf3d0de">ntdv::IFile</a>.</p>
+
+</div>
+</div>
+<a id="a99a1e80505ca37a8bcd899a6cb40fcfb" name="a99a1e80505ca37a8bcd899a6cb40fcfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99a1e80505ca37a8bcd899a6cb40fcfb">&#9670;&#160;</a></span>operator bool()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VirtualFile::operator bool </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Check if the file is valid </p><dl class="section return"><dt>Returns</dt><dd>true if the file is valid, false otherwise </dd></dl>
+
+<p>Implements <a class="el" href="classntdv_1_1_i_file.html#a133e8e099ea9dd97283b5c2bc0d47aeb">ntdv::IFile</a>.</p>
+
+</div>
+</div>
+<a id="a8cee914dd8db1c08bb7a9b3a64f43e77" name="a8cee914dd8db1c08bb7a9b3a64f43e77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cee914dd8db1c08bb7a9b3a64f43e77">&#9670;&#160;</a></span>Path()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * VirtualFile::Path </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the path of the file </p><dl class="section return"><dt>Returns</dt><dd>the file path </dd></dl>
+
+<p>Implements <a class="el" href="classntdv_1_1_i_file.html#a2934dba7662274976ca4971ac595581d">ntdv::IFile</a>.</p>
+
+</div>
+</div>
+<a id="a620f27e91732ff2669fb4e6e6676a953" name="a620f27e91732ff2669fb4e6e6676a953"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a620f27e91732ff2669fb4e6e6676a953">&#9670;&#160;</a></span>Position()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t VirtualFile::Position </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the current position in the file </p><dl class="section return"><dt>Returns</dt><dd>the current position </dd></dl>
+
+<p>Implements <a class="el" href="classntdv_1_1_i_file.html#a65f12d48a49ada9d3cea5ea6fe7a0d4e">ntdv::IFile</a>.</p>
+
+</div>
+</div>
+<a id="aed84f16a401e9a13e500518bb6c76728" name="aed84f16a401e9a13e500518bb6c76728"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed84f16a401e9a13e500518bb6c76728">&#9670;&#160;</a></span>Read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t VirtualFile::Read </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>buf</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Read data from the file </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buf</td><td>- buffer to store the data </td></tr>
+    <tr><td class="paramname">size</td><td>- size of the data to read </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the number of bytes read </dd></dl>
+
+<p>Implements <a class="el" href="classntdv_1_1_i_file.html#ab822e49e729883911c3f0a7552a59af9">ntdv::IFile</a>.</p>
+
+</div>
+</div>
+<a id="a7930a3ac5dceb9b33bf44426a2c4d74f" name="a7930a3ac5dceb9b33bf44426a2c4d74f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7930a3ac5dceb9b33bf44426a2c4d74f">&#9670;&#160;</a></span>RewindDirectory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VirtualFile::RewindDirectory </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Go to the begining of the directory. </p>
+
+<p>Implements <a class="el" href="classntdv_1_1_i_file.html#aae7cffe849ee4622f4855168c815af9f">ntdv::IFile</a>.</p>
+
+</div>
+</div>
+<a id="a722c1c3f3e21cc969f2cca4d02756e53" name="a722c1c3f3e21cc969f2cca4d02756e53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a722c1c3f3e21cc969f2cca4d02756e53">&#9670;&#160;</a></span>Seek()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool VirtualFile::Seek </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>pos</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="namespacentdv.html#a27c451fc8392020fb45df21ff63899a2">SeekMode</a></td>          <td class="paramname"><span class="paramname"><em>mode</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Seek to a position in the file </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>- position to seek to </td></tr>
+    <tr><td class="paramname">mode</td><td>- mode of seeking </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful, false otherwise </dd></dl>
+
+<p>Implements <a class="el" href="classntdv_1_1_i_file.html#a1d4cfa0b287f2a67ca8c4a34d958da86">ntdv::IFile</a>.</p>
+
+</div>
+</div>
+<a id="acda70b559357a783c69e61e2bf196906" name="acda70b559357a783c69e61e2bf196906"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acda70b559357a783c69e61e2bf196906">&#9670;&#160;</a></span>SeekDir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean VirtualFile::SeekDir </td>
+          <td>(</td>
+          <td class="paramtype">long</td>          <td class="paramname"><span class="paramname"><em>position</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Seek to a position in the directory </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">position</td><td>- position to seek to </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful, false otherwise </dd></dl>
+
+<p>Implements <a class="el" href="classntdv_1_1_i_file.html#ae4fe504e526d7a29889f7dea29a430f0">ntdv::IFile</a>.</p>
+
+</div>
+</div>
+<a id="a062919e4e69f7c6acec1813aa526d3dd" name="a062919e4e69f7c6acec1813aa526d3dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a062919e4e69f7c6acec1813aa526d3dd">&#9670;&#160;</a></span>SetBufferSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool VirtualFile::SetBufferSize </td>
+          <td>(</td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the buffer size for the file </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">size</td><td>- size of the buffer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if successful, false otherwise </dd></dl>
+
+<p>Implements <a class="el" href="classntdv_1_1_i_file.html#a56e7f033af041b9e6f2121f3dcea6d6a">ntdv::IFile</a>.</p>
+
+</div>
+</div>
+<a id="ab622b31cd10dcebd342e56b7d4109581" name="ab622b31cd10dcebd342e56b7d4109581"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab622b31cd10dcebd342e56b7d4109581">&#9670;&#160;</a></span>Size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t VirtualFile::Size </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the size of the file </p><dl class="section return"><dt>Returns</dt><dd>the size of the file </dd></dl>
+
+<p>Implements <a class="el" href="classntdv_1_1_i_file.html#a623b39c2419c79f55ba45388f50dbd6a">ntdv::IFile</a>.</p>
+
+</div>
+</div>
+<a id="a7b7a1eff1f0ec4b7fe93f70844907b83" name="a7b7a1eff1f0ec4b7fe93f70844907b83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b7a1eff1f0ec4b7fe93f70844907b83">&#9670;&#160;</a></span>Write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t VirtualFile::Write </td>
+          <td>(</td>
+          <td class="paramtype">const uint8_t *</td>          <td class="paramname"><span class="paramname"><em>buf</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Write data to the file </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">buf</td><td>- buffer containing the data </td></tr>
+    <tr><td class="paramname">size</td><td>- size of the data </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>the number of bytes written </dd></dl>
+
+<p>Implements <a class="el" href="classntdv_1_1_i_file.html#a0a80940a5a6236e896ae821caef3bf66">ntdv::IFile</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a45c3a6701844d56f5fa0a2e88eb03e93" name="a45c3a6701844d56f5fa0a2e88eb03e93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45c3a6701844d56f5fa0a2e88eb03e93">&#9670;&#160;</a></span>_dir</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">DIR* ntdv::VirtualFile::_dir</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointer to the directory. </p>
+
+</div>
+</div>
+<a id="afa5be93f1c0bab967269383ba5ffb09e" name="afa5be93f1c0bab967269383ba5ffb09e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa5be93f1c0bab967269383ba5ffb09e">&#9670;&#160;</a></span>_file</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILE* ntdv::VirtualFile::_file</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointer to the file. </p>
+
+</div>
+</div>
+<a id="a7d9bdb66ba1b6a433b5cf91f16958ceb" name="a7d9bdb66ba1b6a433b5cf91f16958ceb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d9bdb66ba1b6a433b5cf91f16958ceb">&#9670;&#160;</a></span>_fs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classntdv_1_1_virtual_file_system.html">VirtualFileSystem</a>* ntdv::VirtualFile::_fs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointer to the virtual file system. </p>
+
+</div>
+</div>
+<a id="a35e6d0ba9db39b31c19cad6bfebbe71a" name="a35e6d0ba9db39b31c19cad6bfebbe71a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35e6d0ba9db39b31c19cad6bfebbe71a">&#9670;&#160;</a></span>_isDirectory</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ntdv::VirtualFile::_isDirectory</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether the file is a directory. </p>
+
+</div>
+</div>
+<a id="af319e5bb69b1a45afa42a32653290de0" name="af319e5bb69b1a45afa42a32653290de0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af319e5bb69b1a45afa42a32653290de0">&#9670;&#160;</a></span>_path</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* ntdv::VirtualFile::_path</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Path of the file. </p>
+
+</div>
+</div>
+<a id="a6ec5deab30a1edbb632109f8bea1caac" name="a6ec5deab30a1edbb632109f8bea1caac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ec5deab30a1edbb632109f8bea1caac">&#9670;&#160;</a></span>_stat</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct stat ntdv::VirtualFile::_stat</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>File status information. </p>
+
+</div>
+</div>
+<a id="ab984ff3d3fe134f2015faf67eac9bb68" name="ab984ff3d3fe134f2015faf67eac9bb68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab984ff3d3fe134f2015faf67eac9bb68">&#9670;&#160;</a></span>_written</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ntdv::VirtualFile::_written</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">mutable</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Whether the file has been written to. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li><a class="el" href="_virtual_file_8h_source.html">VirtualFile.h</a></li>
+<li><a class="el" href="_virtual_file_8cpp.html">VirtualFile.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespacentdv.html">ntdv</a></li><li class="navelem"><a class="el" href="classntdv_1_1_virtual_file.html">VirtualFile</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
+  </ul>
+</div>
+</body>
+</html>
